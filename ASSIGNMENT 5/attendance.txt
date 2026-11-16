@@ -1,0 +1,5 @@
+101,Ravi,Present
+102,Arun,Present
+103,Kumar,Absent
+104,Ram,Present
+105,Sam,Absent
