@@ -1,0 +1,1 @@
+Place the downloaded MySQL Connector/J .jar file in this folder.
