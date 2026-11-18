@@ -1,0 +1,25 @@
+CO4 RUN INSTRUCTIONS (macOS / JDK 21)
+
+From the 02_Java_Source_Code folder:
+
+Task 3 – Library Search
+  javac LibrarySearchScreen.java
+  java LibrarySearchScreen
+
+Task 4 – Draw Pad
+  javac DrawPad.java
+  java DrawPad
+
+Task 5 – Currency Converter
+  javac Converter.java
+  java Converter
+
+Task 6 – Event Registration
+  Execute ../03_SQL_Scripts/campus_events.sql in MySQL.
+  Install/download MySQL Connector/J separately and set JDBC URL, USER and PASSWORD
+  in EventRegistrationApp.java. Then:
+  javac -cp .:/path/to/mysql-connector-j.jar EventRegistrationApp.java
+  java -cp .:/path/to/mysql-connector-j.jar EventRegistrationApp
+
+Tasks 1 and 2 are written/design tasks. Task 6 GUI/JDBC execution and some requested
+screenshots remain outstanding; see the PDF report and README.md.

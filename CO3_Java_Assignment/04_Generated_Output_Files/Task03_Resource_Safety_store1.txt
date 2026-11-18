@@ -1,0 +1,2 @@
+Store 1 sales: 1200
+Store 1 returns: 50
