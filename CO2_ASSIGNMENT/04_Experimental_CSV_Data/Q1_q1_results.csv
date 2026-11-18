@@ -1,0 +1,10 @@
+workload,tickets,fields,approach,repetitions,average_ns,estimated_strings
+ShortTicket,1,6,StringPlus,5,18333,6
+ShortTicket,1,6,StringBuilder,5,2483,1
+ShortTicket,1,6,StringBuffer,5,4450,1
+HighVolume,10000,50,StringPlus,5,37396808,500000
+HighVolume,10000,50,StringBuilder,5,9207225,10000
+HighVolume,10000,50,StringBuffer,5,7852317,10000
+CustomWorkload,3000,100,StringPlus,5,17805175,300000
+CustomWorkload,3000,100,StringBuilder,5,5215667,3000
+CustomWorkload,3000,100,StringBuffer,5,5748525,3000

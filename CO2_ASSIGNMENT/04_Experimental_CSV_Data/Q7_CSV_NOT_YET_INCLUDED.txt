@@ -1,0 +1,1 @@
+Q7 program output confirmed that q7_results.csv was generated, but the raw CSV was not uploaded to this conversation when the package was created. The Q7 Word document contains the values visible in the user's Terminal screenshot. Add q7_results.csv from the Q7_Redesign_Challenge folder to complete the raw-data evidence.
