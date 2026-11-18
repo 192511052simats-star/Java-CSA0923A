@@ -1,0 +1,18 @@
+=== TASK 12: DESIGN ADAPTATION ===
+Floor 1 slots: 20
+Floor 2 slots: 25
+Floor 3 slots: 30
+Floor 4 slots: 35
+Floor 5 slots: 40
+Total slots: 150
+E-bike flat fee: Rs. 15.0
+Delivery van fee during 09:00-17:00: Rs. 60.0
+Delivery van fee outside 09:00-17:00: Rs. 30.0
+Standard car fee for 2 hours: Rs. 60.0
+One-day visitor pass valid: true
+Visitor fee after pass discount on Rs. 60: Rs. 0.0
+E-bike allocated at floor/slot: [1, 1]
+Delivery van allocated at floor/slot: [1, 2]
+Decision: MODIFY original design.
+Existing Vehicle hierarchy retained; new categories and pricing rules added.
+Unequal floor capacities are represented by a jagged array.

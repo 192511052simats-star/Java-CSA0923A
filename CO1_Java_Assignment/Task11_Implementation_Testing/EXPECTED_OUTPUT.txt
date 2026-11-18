@@ -1,0 +1,16 @@
+=== TASK 11: PARKING SYSTEM TESTS ===
+Normal entry for two vehicle types: PASS
+Normal exit and fee calculation: PASS
+Bike fee (60 min): Rs. 10.0
+Car fee (90 min): Rs. 60.0
+Boundary: zero-minute parking: PASS
+Boundary: exactly 60-minute slab: PASS
+Invalid: unknown vehicle type: PASS
+Invalid: duplicate registration: PASS
+Invalid slot number rejected: PASS
+Boundary: last free slot / full facility: PASS
+Duplicate-test vehicle fee: Rs. 30.0
+=== DAILY COLLECTION SCENARIO ===
+Hand-calculated collection: Rs. 130.0
+Program collection: Rs. 130.0
+Hand calculation matches program: PASS

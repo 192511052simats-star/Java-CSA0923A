@@ -1,0 +1,32 @@
+TASK 12 ANALYSIS NOTES
+
+Impact analysis:
+- Two new vehicle types: e-bike and delivery van.
+- New pricing rules: e-bike flat fee; delivery van double car rate from 09:00 inclusive
+  to 17:00 exclusive.
+- Visitors can obtain a one-day pass.
+- Facility now has five floors with unequal capacities.
+- A rectangular String[5][sameSlots] is unsuitable when floor capacities differ.
+  A jagged String[][] allows each floor to have a different length.
+
+Evaluation and decision:
+Decision: MODIFY.
+- Retain the Vehicle abstraction and existing Car concept.
+- Add EBike and DeliveryVan subclasses.
+- Add Pass interface and OneDayVisitorPass implementation.
+- Add PricingRule abstraction with standard, e-bike-flat and delivery-van rules.
+- Use jagged array for unequal floor capacities.
+- Pricing rules are kept in separate strategy objects rather than scattered across
+  all vehicle classes.
+- Existing vehicle base abstraction remains unchanged; new categories and pricing
+  strategies are added as extensions.
+
+Evidence-based defence:
+- The demo tests e-bike flat fee, delivery van peak and off-peak fees, visitor pass,
+  five unequal floor capacities, and slot allocation.
+- Future categories can be added with a Vehicle subclass and an appropriate PricingRule.
+- Trade-off: more small classes/interfaces, but less conditional logic in one central
+  method and better separation of pricing policy from vehicle identity.
+
+Note: the demo treats the one-day pass as valid until the supplied LocalTime boundary.
+In a production application, use LocalDateTime and a real pass issue/expiry date.

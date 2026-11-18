@@ -1,0 +1,25 @@
+TASK 11 ANALYSIS NOTES
+
+Test categories covered:
+- Normal: two-wheelers and cars enter and exit.
+- Boundary: zero-minute stay, exact 60-minute slab, facility full/last free slot.
+- Invalid: unknown vehicle type, duplicate registration, invalid floor/slot coordinate.
+- Daily collection hand-check:
+  Two-wheeler: 60 minutes => 1 hour x Rs 10 = Rs 10.
+  Car: 90 minutes => 2 hours x Rs 30 = Rs 60.
+  Car: 0 minutes => Rs 0.
+  Car: 60 minutes => 1 hour x Rs 30 = Rs 30.
+  The duplicate-test car is also exited for Rs 30, making the total Rs 130. Program output is checked against this amount.
+
+Design evaluation:
+- Encapsulation: fields are private and constructors validate values.
+- Inheritance/polymorphism: Vehicle can be specialized into concrete categories.
+- Abstraction: ParkingSystem exposes entry/exit operations and hides storage details.
+- Limitation: fixed-size ParkingTicket[] capacity and linear search during exit.
+
+Alternative storage:
+- ParkingTicket[]: lookup by registration is O(n); storage O(n).
+- ArrayList<ParkingTicket>: lookup remains O(n), storage O(n), but dynamic capacity
+  and simpler insertion/removal are available.
+- HashMap<String, ParkingTicket>: average lookup O(1), storage O(n), with extra
+  hash-table overhead. It is a strong choice when exit lookup by registration is frequent.

@@ -1,0 +1,32 @@
+TASK 10 ANALYSIS NOTES
+
+Package structure:
+- parking.model: ParkingSlot and ParkingTicket, the data/model classes.
+- parking.service: ParkingService, which allocates slots and issues tickets.
+- parking.app: Task10Demo, the application entry point.
+
+Access modifiers:
+- private fields protect object state from direct external modification.
+- public constructors/getters/mutators form the supported API.
+- package declarations separate responsibilities and prevent accidental name collisions.
+- no protected or package-private member is needed in this small demonstration.
+
+Validation:
+- registration number must not be blank.
+- floor, slot and ticket number must be positive.
+- duration must not be negative or null.
+- a slot cannot be occupied twice.
+
+Wrapper classes and autoboxing:
+- durationMinutes is Integer.
+- setDurationMinutes(90) autoboxes int to Integer.
+- durationAsPrimitive() unboxes Integer to int.
+- Integer objects must be compared using equals() for value equality, not ==.
+  Integer caching can make == appear to work for some small values, but it is not a
+  reliable value comparison for arbitrary Integer objects.
+
+Alternative public-field design:
+If fields were public, every caller would need to repeat the same validation.
+A caller could assign a negative duration or invalid slot number and bypass checks.
+The validation operation itself is O(1) per update in either design, but encapsulation
+centralizes it in one place instead of repeating it at every call site.

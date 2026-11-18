@@ -1,0 +1,15 @@
+=== PACKAGE AND ENCAPSULATION DEMO ===
+Ticket: 5001
+Vehicle: TN10AA1234
+Allocated floor: 1
+Allocated slot: 1
+Duration (Integer): 90
+Duration as int: 90
+Integer objects compared with ==: false
+Integer objects compared with equals(): true
+Validation: Duration must be zero or greater.
+Validation: Invalid slot number.
+=== SLOT STATUS ===
+Floor 1, Slot 1, Vehicle TN10AA1234
+Floor 1, Slot 2, Vehicle FREE
+Floor 2, Slot 1, Vehicle FREE
